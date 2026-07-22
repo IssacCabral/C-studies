@@ -1,7 +1,29 @@
 #include <stdio.h>
 
+void printHeader() {
+  printf("%10s %10s\n", "Fahrenheit", "Celsius");
+  printf("%10s %10s\n", "----------", "-------");
+}
+
+void printConversion() {
+  float fahr, celsius;
+  float lower, upper, step;
+
+  lower = 0;
+  upper = 300;
+  step = 20;
+
+  fahr = lower;
+
+  while(fahr <= upper) {
+    celsius = (5.0 / 9.0) * (fahr - 32.0);
+    printf("%10.0f %10.1f\n", fahr, celsius);
+    fahr = fahr + step;
+  }
+}
+
 int main() {
-  char myChar = 65;
-  printf("Valor: %c, Tamanho em Bytes: %zu\n", myChar, sizeof(myChar));
+  printHeader();
+  printConversion();
   return 0;
 }
