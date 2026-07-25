@@ -49,9 +49,6 @@ void printWithGetChar() {
   */
 }
 
-int main() {
-  int c = getchar();
-  printf("%d\n", c);
-
-
+int main(void) {
+  printWithGetChar();
 }
