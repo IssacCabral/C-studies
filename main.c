@@ -1,11 +1,8 @@
 #include <stdio.h>
 
 int main() {
-  int num;
-  float fnum;
-
-  printf("Entre com um inteiro e um float: ");
-  scanf("%d %f", &num, &fnum);
-  printf("num: %d, fnum: %.2f", num, fnum);
+  double nc;
+  for (nc = 0; getchar() != EOF; ++nc);
+  printf("%.0f\n", nc);
   return 0;
 }
