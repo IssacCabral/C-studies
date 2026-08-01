@@ -18,12 +18,12 @@ int main() {
 
   while ((c = getchar()) != EOF) {
     if (c != BLANK) {
-      printf("%c", c);
+      putchar(c);
       previous = c;
       continue;
     }
     if (c == BLANK && previous != BLANK) {
-      printf("%c", c);
+      putchar(c);
       previous = c;
       continue;
     }
