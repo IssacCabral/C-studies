@@ -1,3 +1,37 @@
+/*
+
+* Em C, uma string é representada por um array de caracteres terminado pelo
+* caractere nulo ('\0'). O array por si só NÃO recebe automaticamente esse
+* terminador quando é preenchido manualmente; ele apenas reserva espaço na
+* memória. Por isso, após ler todos os caracteres da linha, é necessário
+* inserir explicitamente o '\0' para indicar onde a string termina.
+*
+* Exemplo:
+* Entrada: "hi"
+*
+* Antes do terminador:
+* +---+---+----+----+
+* | h | i | ?  | ?  |
+* +---+---+----+----+
+*
+* Depois de s[i] = '\0':
+* +---+---+----+----+
+* | h | i | \0 | ?  |
+* +---+---+----+----+
+*
+* Funções como printf, strlen, strcpy e strcmp dependem desse terminador
+* para saber onde a string termina. O caractere '\0' possui valor numérico
+* zero (0). Por isso, uma inicialização como:
+*
+* ```
+  char s[10] = {0};
+  ```
+*
+* preenche todas as posições do array com o valor zero, que para um char
+* corresponde exatamente ao caractere nulo '\0'.
+*/
+
+
 #include <stdio.h>
 
 #define MAXLINE 1000 /* maximum input line length */
