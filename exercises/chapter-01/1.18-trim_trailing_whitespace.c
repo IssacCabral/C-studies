@@ -1,5 +1,6 @@
 /**
- * Exercício 1-18. Limpe a entrada removendo espaços e tabulações desnecessários no final de cada linha e ignore linhas completamente vazias
+ * Exercício 1-18. Limpe a entrada removendo espaços e tabulações desnecessários no
+ * final de cada linha e ignore linhas completamente vazias
 */
 
 #include <stdio.h>
@@ -13,16 +14,16 @@ int main() {
   char line[MAXLINE]; /* current input line */
 
   while ((len = getline_k(line, MAXLINE)) > 0) {
-    int found_valid_charater = 0;
+    int found_valid_character = 0;
 
     for (int i = 0; i < len - 1; i++) {
       if (line[i] != ' ' && line[i] != '\t') {
-        found_valid_charater = 1;
+        found_valid_character = 1;
         break;
       }
     }
 
-    if (found_valid_charater) {
+    if (found_valid_character) {
       for (int i = len - 2; line[i] == ' ' || line[i] == '\t'; --i) {
         if (line[i - 1] != ' ' && line[i - 1] != '\t') {
           line[i] = '\n';
