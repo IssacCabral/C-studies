@@ -2,8 +2,9 @@
 
 /**
  * Buffer e Stream
- * Stream (fluxo) → é um conceito lógico, a forma como o programa enxerga os dados.
- * Buffer → é uma área de memória usada para armazenar temporariamente esses dados.
+ * Stream (fluxo) → é um conceito lógico, a forma como o programa enxerga os
+ * dados. Buffer → é uma área de memória usada para armazenar temporariamente
+ * esses dados.
  */
 
 void printWithGetChar() {
@@ -30,7 +31,7 @@ void printWithGetChar() {
    *   imprime '\n' -> espera novos dados ou EOF
    *
    * O loop termina somente quando getchar() retorna EOF (fim da entrada).
-  */
+   */
   int c;
   while ((c = getchar()) != EOF) {
     putchar(c);
@@ -40,15 +41,14 @@ void printWithGetChar() {
    * getchar() retorna um int, não um char.
    *
    * Motivo:
-   * - Se houver um caractere disponível, retorna seu código (ex.: 'A', '0', '\n').
+   * - Se houver um caractere disponível, retorna seu código (ex.: 'A', '0',
+   * '\n').
    * - Se não houver mais entrada, retorna EOF (End Of File).
    *
    * Como EOF é um valor especial que não representa um caractere válido
    * (geralmente -1), a variável precisa ser do tipo int para armazenar
    * tanto qualquer caractere quanto o valor EOF sem ambiguidades.
-  */
+   */
 }
 
-int main(void) {
-  printWithGetChar();
-}
+int main(void) { printWithGetChar(); }

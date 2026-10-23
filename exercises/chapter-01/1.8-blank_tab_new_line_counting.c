@@ -10,17 +10,17 @@ int main() {
   int new_line_count = 0;
   int c;
 
-  while((c = getchar()) != EOF) {
+  while ((c = getchar()) != EOF) {
     switch (c) {
-      case BLANK:
-        blank_count++;
-        break;
-      case TAB:
-        tab_count++;
-        break;
-      case NEW_LINE:
-        new_line_count++;
-        break;
+    case BLANK:
+      blank_count++;
+      break;
+    case TAB:
+      tab_count++;
+      break;
+    case NEW_LINE:
+      new_line_count++;
+      break;
     }
   }
 
