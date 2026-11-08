@@ -10,22 +10,18 @@
  * Hello   world
  * SAIDA:
  * Hello world
-*/
+ */
 
 int main() {
   int c;
-  int previous;
+  int previous = '\0';
 
   while ((c = getchar()) != EOF) {
     if (c != BLANK) {
       putchar(c);
-      previous = c;
-      continue;
     }
     if (c == BLANK && previous != BLANK) {
       putchar(c);
-      previous = c;
-      continue;
     }
     previous = c;
   }
