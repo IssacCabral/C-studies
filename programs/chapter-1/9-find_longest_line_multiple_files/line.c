@@ -1,11 +1,12 @@
 #include "line.h"
 #include <stdio.h>
 
+/* External variable definitions */
 int max;
 char line[MAXLINE];
 char longest[MAXLINE];
 
-int get_line() {
+int get_line(void) {
   int c, i;
 
   for (i = 0; i < MAXLINE - 1 && (c = getchar()) != EOF && c != '\n'; i++) {
@@ -21,7 +22,7 @@ int get_line() {
   return i;
 }
 
-void copy() {
+void copy(void) {
   int i;
   extern char line[], longest[];
 
