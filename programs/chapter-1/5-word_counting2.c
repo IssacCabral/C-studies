@@ -7,10 +7,7 @@
 #define TAB '\t'
 #define NEW_LINE '\n'
 
-/**
- * palavra -> sequência de caracteres que não contenha espaços, tabulações ou
- * quebras de linha
- */
+/* palavra: sequência sem espaço, tab ou nova linha */
 
 int isInWord(int character) {
   if (character == BLANK || character == TAB || character == NEW_LINE) {
