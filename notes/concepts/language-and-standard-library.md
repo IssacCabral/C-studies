@@ -1,5 +1,3 @@
-Writing
-
 # Linguagem C e Biblioteca Padrão
 
 ## 1\. Linguagem C
